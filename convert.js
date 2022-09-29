@@ -14,12 +14,13 @@ const convert = (output) => {
   ffmpeg()
     .addInput("./1.mp3")
     .inputFormat("mp3")
-    // .audioCodec("pcm_u8")
+    // .audioCodec("pcm_u8") //8bit unsigned
     .audioCodec("pcm_s16le")
     .format("wav")
     .audioChannels("1")
     // .audioBitrate(128)
-    .audioFrequency(8000)
+    .audioFrequency(5678)
+    // .audioFrequency(8000)
     
     // .native()
     .save(`./${output}.wav`);
